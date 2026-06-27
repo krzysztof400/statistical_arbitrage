@@ -25,6 +25,9 @@ RUN mkdir -p /ccache && chmod -R 777 /ccache
 
 ARG UID=1000
 ARG GID=1000
+
+RUN userdel -r ubuntu || true
+
 RUN groupadd -g ${GID} devuser && \
     useradd -u ${UID} -g ${GID} -m -s /bin/bash devuser
 
