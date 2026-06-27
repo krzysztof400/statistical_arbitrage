@@ -15,7 +15,8 @@
                 "ms-vscode.cpptools",
                 "ms-vscode.cpptools-extension-pack",
                 "ms-vscode.cmake-tools",
-                "xaver.clang-format"
+                "xaver.clang-format",
+                "vscodevim.vim"
             ],
             "settings": {
                 "editor.formatOnSave": true,
