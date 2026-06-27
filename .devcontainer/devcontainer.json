@@ -1,0 +1,27 @@
+{
+    "name": "Crypto Arb HFT Environment",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": ".."
+    },
+    "mounts": [
+        "source=ccache-vol,target=/ccache,type=volume",
+        "source=${localEnv:HOME}/.bashrc,target=/home/devuser/.bashrc,type=bind,readonly"
+    ],
+    "remoteUser": "devuser",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.cmake-tools",
+                "xaver.clang-format"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "C_Cpp.default.intelliSenseMode": "linux-clang-x64",
+                "C_Cpp.formatting": "clangFormat"
+            }
+        }
+    }
+}
