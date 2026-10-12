@@ -5,6 +5,8 @@ project(statistical_arbitrage)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+enable_testing()
+
 include(FetchContent)
 FetchContent_Declare(
   Catch2

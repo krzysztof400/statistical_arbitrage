@@ -1,6 +1,6 @@
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS "lib/*.cpp")
 
-set(PERFORMANCE_FLAGS "-O3 -march=native -flto")
+set(PERFORMANCE_FLAGS -O3 -march=native -flto)
 
 add_library(stat_arb_lib STATIC ${SOURCES})
 
