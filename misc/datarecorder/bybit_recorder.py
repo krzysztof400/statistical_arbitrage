@@ -66,6 +66,7 @@ async def record(symbols, depth, outdir):
     for s in symbols:
         topics.append(f"orderbook.{depth}.{s}")
         topics.append(f"publicTrade.{s}")
+        topics.append(f"tickers.{s}")
 
     counter = {"n": 0}
     stats_task = asyncio.create_task(stats(counter))
